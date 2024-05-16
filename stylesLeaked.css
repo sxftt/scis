@@ -23,6 +23,7 @@ main {
     width: 90%;
     max-width: 800px;
     margin-top: 20px;
+    margin-bottom: 50px; /* Add margin-bottom to create space between last post and footer */
 }
 
 .post {
