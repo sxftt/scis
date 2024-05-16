@@ -1,0 +1,139 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif; /* Montserrat as primary font, fallback to sans-serif */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbars for WebKit browsers */
+}
+
+h1 {
+    margin: 0;
+    color: #4caf50;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for headings */
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.post-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4caf50;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for post titles */
+}
+
+.post-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-info img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.post-info .posted-by {
+    font-size: 1em;
+    color: #bbb;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for post info */
+}
+
+.post-photos img {
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.post-content {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #ccc;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for post content */
+}
+
+footer {
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 10px 0;
+    text-align: center;
+    color: #bbb;
+    position: fixed;
+    bottom: 0;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for footer */
+}
+
+header {
+    width: 95.5%;
+    padding: 10px 40px; /* Increased padding to left and right */
+    background-color: #1f1f1f;
+    text-align: center;
+    border-bottom: 2px solid #333;
+
+}
+
+h1 {
+    margin: 0;
+    color: #4caf50;
+}
+
+nav {
+    display: flex;
+    padding: 0 60px; /* Add padding to left and right */
+}
+
+nav button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px; /* Adjust padding */
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s, background-color 0.3s;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for buttons */
+}
+
+nav button:hover {
+    background-color: #388e3c;
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+}
+
+.back-button:hover {
+    transform: rotate(15deg) scale(1.2); /* Tilt effect and scale up on hover */
+}
+
+.back-button img {
+    width: 100%;
+    height: 100%;
+}
