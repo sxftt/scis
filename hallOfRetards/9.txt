@@ -1,4 +1,0 @@
-title:  
-photos: none
-content:  
-files: none
