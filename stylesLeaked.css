@@ -79,9 +79,8 @@ footer {
     padding: 10px 0;
     text-align: center;
     color: #bbb;
-    position: fixed;
-    bottom: 0;
     font-family: 'Montserrat', sans-serif; /* Montserrat for footer */
+    margin-top: auto; /* Push the footer to the bottom of the page */
 }
 
 header {
