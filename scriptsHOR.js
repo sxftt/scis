@@ -4,11 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     postFiles.forEach(file => {
         fetch(`hallOfRetards/${file}`)
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch ${file}`);
+                }
+                return response.text();
+            })
             .then(data => {
                 const post = parsePostData(data);
                 const postElement = createPostElement(post);
                 postContainer.appendChild(postElement);
+            })
+            .catch(error => {
+                console.error('Error fetching post file:', error);
             });
     });
 
@@ -34,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const infoElement = document.createElement('div');
         infoElement.className = 'post-info';
+        infoElement.textContent = `Posted by ${post.author} on ${post.date}`; // Example format
 
         const contentElement = document.createElement('div');
         contentElement.className = 'post-content';
