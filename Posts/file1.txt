@@ -1,0 +1,6 @@
+title: Bun venit la libertate!
+photos: none
+postedBy: alex
+postedByPFP: alexpfp1.png
+content: Am facut acest site cu scopul de a le oferi tuturor libertatea de a se exprima.\nSCIS are in final libertate de exprimare pe internet!\nSunt 2 reguli simple:\n Fara NSFW si fara gore.
+files: none
