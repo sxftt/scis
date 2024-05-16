@@ -44,10 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contentElement.className = 'post-content';
         contentElement.innerHTML = post.content.replace(/\\n/g, '<br>'); // Replace \n with <br> for line breaks
 
-        const authorElement = document.createElement('div');
-        authorElement.className = 'post-author';
-        authorElement.textContent = `Posted by ${post.author || 'Anonymous'} on ${post.date || 'Unknown date'}`;
-
         const photosElement = document.createElement('div');
         photosElement.className = 'post-photos';
         if (post.photos !== 'none') {
@@ -60,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         postElement.appendChild(titleElement);
-        postElement.appendChild(authorElement);  // Add the author element
         postElement.appendChild(contentElement);
         if (post.photos !== 'none') {
             postElement.appendChild(photosElement);
