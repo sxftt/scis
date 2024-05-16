@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
         titleElement.className = 'post-title';
         titleElement.textContent = post.title;
 
+        const infoElement = document.createElement('div');
+        infoElement.className = 'post-info';
+        infoElement.textContent = post.date; // Only the date is displayed
+
         const contentElement = document.createElement('div');
         contentElement.className = 'post-content';
         contentElement.innerHTML = post.content.replace(/\\n/g, '<br>'); // Replace \n with <br> for line breaks
@@ -56,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         postElement.appendChild(titleElement);
+        postElement.appendChild(infoElement);
         postElement.appendChild(contentElement);
         if (post.photos !== 'none') {
             postElement.appendChild(photosElement);
