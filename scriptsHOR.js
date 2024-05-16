@@ -40,10 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         titleElement.className = 'post-title';
         titleElement.textContent = post.title;
 
-        const infoElement = document.createElement('div');
-        infoElement.className = 'post-info';
-        infoElement.textContent = `Posted by ${post.author} on ${post.date}`; // Example format
-
         const contentElement = document.createElement('div');
         contentElement.className = 'post-content';
         contentElement.innerHTML = post.content.replace(/\\n/g, '<br>'); // Replace \n with <br> for line breaks
