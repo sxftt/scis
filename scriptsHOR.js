@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             postElement.appendChild(titleElement);
         }
 
-        if (post.photos) {
+        if (post.photos && post.photos !== 'none') {
             const photosElement = document.createElement('div');
             photosElement.className = 'post-photos';
             photosElement.textContent = `Photos: ${post.photos}`;
@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (post.content) {
             const contentElement = document.createElement('div');
             contentElement.className = 'post-content';
-            contentElement.innerHTML = `Content: ${post.content.replace(/\\n/g, '<br>')}`; // Replace \n with <br> for line breaks
+            contentElement.innerHTML = post.content.replace(/\\n/g, '<br>'); // Replace \n with <br> for line breaks
             postElement.appendChild(contentElement);
         }
 
-        if (post.files) {
+        if (post.files && post.files !== 'none') {
             const filesElement = document.createElement('div');
             filesElement.className = 'post-files';
             filesElement.textContent = `Files: ${post.files}`;
