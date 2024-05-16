@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         postElement.appendChild(titleElement);
-        postElement.appendChild(infoElement);
         postElement.appendChild(contentElement);
         if (post.photos !== 'none') {
             postElement.appendChild(photosElement);

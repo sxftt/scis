@@ -1,4 +1,5 @@
 title: 1. Patrick Baltes-Andrei
 photos: none
+postedBy: no bro
 content: aka Nr. 1
 files: none
