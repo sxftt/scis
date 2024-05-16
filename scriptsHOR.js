@@ -36,32 +36,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const postElement = document.createElement('div');
         postElement.className = 'post';
 
-        if (post.title) {
-            const titleElement = document.createElement('div');
-            titleElement.className = 'post-title';
-            titleElement.textContent = `Title: ${post.title}`;
-            postElement.appendChild(titleElement);
+        const titleElement = document.createElement('div');
+        titleElement.className = 'post-title';
+        titleElement.textContent = post.title;
+
+        const contentElement = document.createElement('div');
+        contentElement.className = 'post-content';
+        contentElement.innerHTML = post.content.replace(/\\n/g, '<br>'); // Replace \n with <br> for line breaks
+
+        const authorElement = document.createElement('div');
+        authorElement.className = 'post-author';
+        authorElement.textContent = `Posted by ${post.author || 'Anonymous'} on ${post.date || 'Unknown date'}`;
+
+        const photosElement = document.createElement('div');
+        photosElement.className = 'post-photos';
+        if (post.photos !== 'none') {
+            const photoFiles = post.photos.split(' ');
+            photoFiles.forEach(photo => {
+                const imgElement = document.createElement('img');
+                imgElement.src = `images/${photo}`;
+                photosElement.appendChild(imgElement);
+            });
         }
 
-        if (post.photos && post.photos !== 'none') {
-            const photosElement = document.createElement('div');
-            photosElement.className = 'post-photos';
-            photosElement.textContent = `Photos: ${post.photos}`;
+        postElement.appendChild(titleElement);
+        postElement.appendChild(authorElement);  // Add the author element
+        postElement.appendChild(contentElement);
+        if (post.photos !== 'none') {
             postElement.appendChild(photosElement);
-        }
-
-        if (post.content) {
-            const contentElement = document.createElement('div');
-            contentElement.className = 'post-content';
-            contentElement.innerHTML = post.content.replace(/\\n/g, '<br>'); // Replace \n with <br> for line breaks
-            postElement.appendChild(contentElement);
-        }
-
-        if (post.files && post.files !== 'none') {
-            const filesElement = document.createElement('div');
-            filesElement.className = 'post-files';
-            filesElement.textContent = `Files: ${post.files}`;
-            postElement.appendChild(filesElement);
         }
 
         return postElement;
