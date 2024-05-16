@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const postContainer = document.getElementById('post-container');
-    const postFiles = ['1', '2', '3', '4', '5', '6', '7', '8']; // Add all your post files here
+    const postFiles = ['1.txt', '2.txt', '3.txt', '4.txt', '5.txt', '6.txt', '7.txt', '8.txt']; // Add all your post files here
 
     postFiles.forEach(file => {
         fetch(`hallOfRetards/${file}`)
