@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const postContainer = document.getElementById('post-container');
-    const postFiles = ['file1.txt']; // Add all your post files here
+    const postFiles = ['1', '2', '3', '4', '5', '6', '7', '8', ]; // Add all your post files here
 
     postFiles.forEach(file => {
-        fetch(`hallOfAutism/${file}`)
+        fetch(`hallOfRetards/${file}`)
             .then(response => response.text())
             .then(data => {
                 const post = parsePostData(data);
