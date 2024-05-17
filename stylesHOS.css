@@ -84,17 +84,12 @@ footer {
 }
 
 header {
-    width: 100%;
-    padding: 10px 40px;
+    width: 95.5%;
+    padding: 10px 40px; /* Increased padding to left and right */
     background-color: #1f1f1f;
-    text-align: center; /* Centers the text */
-    color: white; /* Changes text color to white */
-    font-size: 20px; /* Increases font size */
+    text-align: center;
     border-bottom: 2px solid #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
+
 }
 
 h1 {
