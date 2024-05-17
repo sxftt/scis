@@ -1,5 +1,5 @@
-title: David is a dumb ass bitch
-photos: davidloser.jpg
+title: This post was taken down by GitHub.
+photos: none
 postedBy: anonymous
 postedByPFP: anonymous.png
-content: relatable shit 
+content: UNDEFINED
